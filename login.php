@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <title>تسجيل الدخول - Global News Network</title>
+  <title>تسجيل الدخول - E-News</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>

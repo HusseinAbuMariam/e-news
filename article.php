@@ -23,7 +23,7 @@ $art = $stmt->fetch();
 <body>
   <header>
     <div class="container">
-      <div class="logo">🌐 Global News Network</div>
+      <div class="logo">🌐 E-News</div>
       <nav><ul>
         <li><a href="index.php">الرئيسية</a></li>
         <?php foreach($categories as $c): ?>
@@ -49,7 +49,7 @@ $art = $stmt->fetch();
           | بتاريخ <?= date('Y-m-d',strtotime($art['published_date'])) ?>
           <?php if($art['username']): ?> بواسطة <?= htmlspecialchars($art['username']) ?><?php endif; ?>
         </p>
-        <?php if($art['image_url']): ?><img src="<?= $art['image-20150810-11062-1dh3ydx.avif'] ?>" alt="" class="article-img" /><?php endif; ?>
+        <?php if($art['image_url']): ?><img src="<?= $art['image_url'] ?>" alt="" class="article-img" /><?php endif; ?>
         <div class="article-content"><?= nl2br(htmlspecialchars($art['content'])) ?></div>
         <p><a href="category.php?id=<?= $art['category_id'] ?>">&laquo; العودة إلى <?= htmlspecialchars($art['category_name']) ?></a></p>
       </article>
@@ -73,7 +73,7 @@ $art = $stmt->fetch();
 
   <footer>
     <div class="container">
-      <p>© 2025 Global News Network. جميع الحقوق محفوظة.</p>
+      <p>© 2025 E-News. جميع الحقوق محفوظة.</p>
       <div class="quick-links">
         <a href="privacy.html">سياسة الخصوصية</a>
         <a href="terms.html">شروط الخدمة</a>

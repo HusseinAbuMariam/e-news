@@ -1,15 +1,12 @@
 <?php
 require 'db.php';
-// Fetch all categories for nav
 $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
-// Get category ID and name
 $catId = intval($_GET['id'] ?? 0);
 $catName = $pdo
     ->prepare("SELECT category_name FROM categories WHERE category_id = ?")
     ->execute([$catId])
     ? $pdo->prepare("SELECT category_name FROM categories WHERE category_id = ?")->fetchColumn()
     : 'Unknown';
-// Pagination setup
 $total = $pdo->prepare("SELECT COUNT(*) FROM articles WHERE category_id = ?");
 $total->execute([$catId]);
 $totalCount = $total->fetchColumn();
@@ -17,7 +14,6 @@ $limit = 5;
 $page = max(1, intval($_GET['page'] ?? 1));
 $offset = ($page - 1) * $limit;
 $totalPages = ceil($totalCount / $limit);
-// Fetch articles for this category
 $stmt = $pdo->prepare(
     "SELECT * FROM articles WHERE category_id = ? ORDER BY published_date DESC LIMIT ? OFFSET ?"
 );
@@ -32,13 +28,13 @@ $articles = $stmt->fetchAll();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?= htmlspecialchars($catName) ?> - Global News Network</title>
+  <title><?= htmlspecialchars($catName) ?> - E-News</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo">🌐 Global News Network</div>
+      <div class="logo">🌐 E-News</div>
       <nav><ul>
         <li><a href="index.php">الرئيسية</a></li>
         <?php foreach($categories as $c): ?>
@@ -103,7 +99,7 @@ $articles = $stmt->fetchAll();
 
   <footer>
     <div class="container">
-      <p>© 2025 Global News Network. جميع الحقوق محفوظة.</p>
+      <p>© 2025 E-News. جميع الحقوق محفوظة.</p>
       <div class="quick-links">
         <a href="privacy.html">سياسة الخصوصية</a>
         <a href="terms.html">شروط الخدمة</a>

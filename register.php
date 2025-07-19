@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <title>تسجيل مستخدم جديد - Global News Network</title>
+  <title>تسجيل مستخدم جديد - E-News</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>

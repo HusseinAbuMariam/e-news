@@ -1,6 +1,5 @@
 <?php
 require 'db.php';
-// جلب الفئات
 $cats = $pdo->query("SELECT * FROM categories")->fetchAll();
 ?>
 <!DOCTYPE html>
@@ -8,14 +7,14 @@ $cats = $pdo->query("SELECT * FROM categories")->fetchAll();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>الرئيسية - Global News Network</title>
+  <title>الرئيسية - E-News</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="logo">🌐 Global News Network</div>
+      <div class="logo">🌐 E-News</div>
       <nav>
         <ul>
           <li><a href="index.php">الرئيسية</a></li>
@@ -102,7 +101,6 @@ $cats = $pdo->query("SELECT * FROM categories")->fetchAll();
         <?php endif; ?>
       </section>
     <?php endforeach; ?>
-
     <!-- Aside (Trending + Ad) -->
     <aside>
       <h2>الأخبار الرائجة</h2>
@@ -123,7 +121,7 @@ $cats = $pdo->query("SELECT * FROM categories")->fetchAll();
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2025 Global News Network. جميع الحقوق محفوظة.</p>
+      <p>© 2025 E-News. جميع الحقوق محفوظة.</p>
       <div class="quick-links">
         <a href="privacy.html">سياسة الخصوصية</a>
         <a href="terms.html">شروط الخدمة</a>

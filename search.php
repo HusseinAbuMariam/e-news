@@ -23,13 +23,13 @@ if ($q !== '') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>نتائج البحث - Global News Network</title>
+  <title>نتائج البحث - E-News</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo">🌐 Global News Network</div>
+      <div class="logo">🌐 E-News</div>
       <nav><ul>
         <li><a href="index.php">الرئيسية</a></li>
         <?php foreach($categories as $c): ?>
@@ -73,7 +73,7 @@ if ($q !== '') {
 
   <footer>
     <div class="container">
-      <p>© 2025 Global News Network. جميع الحقوق محفوظة.</p>
+      <p>© 2025 E-News. جميع الحقوق محفوظة.</p>
       <div class="quick-links">
         <a href="privacy.html">سياسة الخصوصية</a>
         <a href="terms.html">شروط الخدمة</a>
