@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width">
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>اتصل بنا - Global News Network</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">🌐 Global News Network</div>
+      <nav>
+        <ul>
+          <li><a href="index.php">الرئيسية</a></li>
+          <li><a href="about.html">معلومات عنا</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>اتصل بنا</h1>
+    <form action="contact_process.php" method="POST">
+      <label>الاسم:</label><br />
+      <input type="text" name="name" required /><br />
+      <label>البريد الإلكتروني:</label><br />
+      <input type="email" name="email" required /><br />
+      <label>الرسالة:</label><br />
+      <textarea name="message" rows="5" required></textarea><br />
+      <button type="submit">إرسال</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Global News Network. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+</body>
+</html>
